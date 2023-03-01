@@ -1,1 +1,71 @@
-Q1. Advantages of react?
+Video Link: https://www.youtube.com/watch?v=JHLZzPPUZdE&t=633s
+
+Q1. Advantages of reactJS?
+
+Q2. What is virtual DOM in reactJS?
+
+Q3. What is JSX and what we can do?
+
+Q4. What is it oneway data binding?
+    -> The data flows in one direction.
+
+Q5. What is the use of babel?
+    -> Babel is compiler it converts the jsx into js objects 
+       it helps browser to understand.
+
+Q6. Diff between virtual DOM and real DOM?
+    -> In virtual dom if code changed on x line only that code with process and 
+       not the whole code is processed again.
+       In Real DOM if code is changed on x line the whole code is processed again.
+
+Q7. React JS is framwork or library?
+    -> It is a library.
+
+Q8. What is use of ES6?
+    -> It provides different futures
+        1. let & const
+        2. arrow function
+        3. promises
+        4. callbacks
+        5. map reduce
+
+Q9. What are things we have to create while creating react component?
+    ->  1.Functional class components
+        2.Higher order components
+
+Q10. Which components are best class based or functional based?
+    -> After introduction of hooks functional components are best.
+       Y -> 1.Basically they are simply javascript funcitons they are easiar to test.
+            2.Less line of code as compare to class components
+
+Q11. What is useState in reactJS?
+    -> 1. It is used to tracking the state.
+       (find more info)
+
+Q12. what is difference between controlled components and Uncontrolled components?
+    -> In controlled component input fied is handled by react where in UnControlled component in input fied is handled by DOM.
+
+Q13. What prop drilling in react?
+    -> There is connection between A to B To C
+       So, we cannot directly pass A to C we have to go through A to B To C.
+
+Q14. Can we create costom hooks?
+    -> it is possible.
+
+Q15. What is react.StrickMode?
+    -> It is used to showing the problem in an application.
+    (Find more)
+
+Q16. How to pass from one component to another component?
+    -> 1. with th help of props
+       2. With the help of call back function
+       3. With help of redux
+       4. context state
+            Redux is better then anything
+            Redux is 3rd party
+
+Q17. What react router and how it works?
+    -> (find more and preffer to give example)
+
+Q18. What is left join in MySQL?
+    -> It will return all records form left side and also return common records in both the records left and right.
