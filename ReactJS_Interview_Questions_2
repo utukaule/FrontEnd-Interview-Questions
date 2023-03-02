@@ -1,0 +1,16 @@
+Video link: https://www.youtube.com/watch?v=gnkrDse9QKc&t=4s
+
+Q1. Create a program which increases the count by one?
+    ->  Use useState
+
+Q2. Api will be given to you and have to fetch the data and display the data in string format?
+    ->  use axios for fetching data
+
+Q3. Grab that api data and display on screen
+    ->  Use JSON.Stringify(data)
+    ->  UseEffect
+
+Q4. Display every username and that user image?
+    ->  useState array to store the data.
+
+Q5. And now do pagination and generate multiple result?
