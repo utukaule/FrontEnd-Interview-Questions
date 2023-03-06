@@ -1,0 +1,186 @@
+ReactJs Interview | 🎉 Selected | ReactJs & JavaScript | Experienced :- https://www.youtube.com/watch?v=9cQsv91zBsc
+
+Q1. What is hoisting in JS?
+    ->  Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of 
+        the current script or the current function).
+
+
+Q2. How hoisting works? Will hoisting work with all the variables?
+    (Link :- https://www.w3schools.com/js/js_hoisting.asp)
+    
+    ->  Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of 
+        the current script or the current function).
+        ->  x = 5; // Assign 5 to x
+            elem = document.getElementById("demo"); // Find an element
+            elem.innerHTML = x;                     // Display x in the element
+            var x; // Declare x
+
+    ->  hoisting only work with "var"
+
+    ->  let and const are block scope so hoisting will not work with it.
+        ->  Using a let variable before it is declared will result in a ReferenceError.
+            ->  carName = "Volvo";
+                let carName;
+
+        ->  Using a const variable before it is declared, is a syntax error, so the code will simply not run.
+            ->  carName = "Volvo";
+                const carName;
+
+
+Q3. What is difference in let and var?
+
+    ->  let and var are both used to declare variables.
+
+    ->  Scoping: "var" variables are function-scoped, while "let" variables are block-scoped. This means that variables 
+        declared with "var" are accessible throughout the entire function in which they are declared, whereas variables declared with "let" are only accessible within the block in which they are declared (including nested blocks).
+            
+            ->  function example() {
+                var x = 1;
+                let y = 2;
+                if (true) {
+                    var x = 3; // This reassigns the value of the outer 'x'
+                    let y = 4; // This creates a new 'y' variable that is only accessible within the if block
+                }
+                console.log(x); // Output: 3
+                console.log(y); // Output: 2
+                }
+
+    ->  Hoisting: "var" variables are hoisted, while "let" variables are not. This means that "var" declarations are moved 
+        to the top of their scope during compilation, while "let" declarations remain in place.
+        
+        ->  console.log(x); // Output: undefined
+            var x = 1;
+
+            console.log(y); // Error: Uncaught ReferenceError: y is not defined
+            let y = 2;
+    
+    ->  Re-Declaration: var variables can be re-declared within the same scope, while let variables cannot.
+        
+        ->  var x = 1;
+            var x = 2; // This is allowed, but it can lead to confusion
+
+            let y = 1;
+            let y = 2; // This is not allowed and will result in an error
+
+
+Q4. What is callback function?
+    ->  a callback function is a function that is passed to another function as a parameter.
+
+
+Q5. what is event loop in javascript?
+    (event loop link: https://www.scaler.com/topics/javascript/event-loop-in-javascript/)
+
+    ->  event loop manages the lifecycle of a callback function from the callback queue to the call stack.
+        1.  JS is single threaded. It has only one call stack.
+        2.  Execution of code in javascript is always line by line.
+        3.  Code in javascript is executed by JS Engine which uses the call stack to determine the order of execution.
+        4.  Event loop in JavaScript is a mechanism through which the ‘calls waiting for execution’ in the callback 
+            queue/job queue can be put on the call stack.
+        5.  For any event from the callback queue/job queue to come to call stack, the call stack will have to be empty.
+
+
+
+Q6. What is synchronous and asynchronous JavaScript?
+    ->  Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can 
+        run simultaneously. Synchronous is a blocking architecture, so the execution of each operation is dependent on the completion of the one before it.
+
+
+Q7. What is the precedence in Event Loop? ( between Promise() and setTimeout()) ?
+    ->  Promises have a higher precedence than setTimeout
+        ->  Promise created
+            Event loop started
+            Promise resolved
+            Timeout executed
+
+Q8. What is the Diff. b/ "setTimeout()" & "setInterval()"?
+    
+    ->  Both setTimeout() and setInterval() are functions provided by JavaScript to execute code 
+        at a later time or at regular intervals,
+    ->  The main difference between setTimeout() and setInterval() is how many times the callback function is executed.
+    ->  setTimeout() is used to execute a function once after a specified delay (in milliseconds). The callback function 
+        is executed only once, and the setTimeout() method returns a timeout ID that can be used to cancel the execution 
+        of the callback function using the clearTimeout() method.
+
+        ->  setTimeout(() => {
+                console.log("This will be executed once, after 1 second");
+            }, 1000);
+      
+    ->  setInterval() is used to execute a function repeatedly at a specified interval (in milliseconds). The callback function
+        is executed repeatedly until the setInterval() method is cleared using the clearInterval() method.
+            
+            ->  let count = 0;
+
+                const intervalId = setInterval(() => {
+                console.log("This will be executed repeatedly every 1 second");
+                count++;
+                
+                if (count === 5) {
+                    clearInterval(intervalId);
+                }
+                }, 1000);
+            
+            ->  In this example, the callback function will be executed every second until the count variable reaches 5, at which 
+                point the clearInterval() method is called to stop the execution of the callback function.
+
+                In summary, setTimeout() is used to execute a function once after a delay, while setInterval() is used to execute a function 
+                repeatedly at a specified interval until the interval is cleared.
+
+
+Q9. What are the ES6 features and which you have used?
+    ->  1.Arrow functions: A shorter syntax for defining functions with implicit this binding.
+
+        2.Let and const: Block-scoped variable declarations with let and immutable variable declarations with const.
+        
+        3.Template literals: A more flexible way to define strings that can span multiple lines and include expressions.
+        
+        4.Destructuring: A way to extract values from arrays or objects into separate variables.
+        
+        5.Default parameters: The ability to specify default values for function parameters.
+        
+        6.Rest and spread operators: A concise way to pass multiple arguments or collect them into an array.
+        
+        7.Classes: A new syntax for defining classes and their properties and methods.
+        
+        8.Promises: A built-in way to handle asynchronous operations and avoid callback hell.
+        
+        9.Modules: A standard way to define and load modules, with support for importing and exporting.
+        
+        10.Symbols: A new primitive data type for creating unique identifiers that can be used as object keys.
+        
+        11.Iterators and generators: A way to iterate over collections and generate sequences of values.
+        
+        12.Enhanced object literals: A way to define objects with concise syntax for common scenarios.
+
+        13.New array methods (map, filter, reduce, find, findIndex, every, some, includes)
+
+        14.Import and export statements
+
+Q10.Where do you mostly use Rest Operator?
+    ->  The rest operator (...) is used to represent an indefinite number of arguments as an array. It is used 
+        in function definitions to capture any additional arguments passed to the function beyond the explicitly named parameters.
+    ->  function sum(a, b, ...rest) {
+        let result = a + b;
+        for (let i = 0; i < rest.length; i++) {
+          result += rest[i];
+        }
+        return result;
+      }
+      
+      console.log(sum(1, 2, 3, 4, 5)); // Output: 15
+    ->  In this example, the rest operator ...rest captures all additional arguments passed to the sum() function beyond 
+        the first two explicitly named parameters a and b. The rest parameter is treated as an array, allowing us to loop 
+        over it to sum all the numbers.
+
+
+Q11. What is spread operator in ES6?
+    ->  The spread operator (...) is used to "spread" the elements of an array or object into another array or object. 
+        It can be used to create a new array or object that includes all the elements of an existing array or object, 
+        or to pass the elements of an array or object as separate arguments to a function.
+    ->  const arr1 = [1, 2, 3];
+        const arr2 = [4, 5, 6];
+        const arr3 = [...arr1, ...arr2];
+        
+        console.log(arr3); // Output: [1, 2, 3, 4, 5, 6]
+    ->  In this example, the spread operator ... is used to concatenate two arrays arr1 and arr2 into a new array arr3. 
+        The ...arr1 and ...arr2 syntax spreads out the elements of the arrays, allowing them to be combined into a single array.
+    
