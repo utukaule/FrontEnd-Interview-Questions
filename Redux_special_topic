@@ -1,0 +1,7 @@
+Q1. Why Redux?
+    ->  When a JavaScript application grows big, it becomes difficult for the user to manage its state.
+    ->  Redux solves this problem by managing applications state with a single global object called store.
+    ->  Making testing very easy.
+    ->  Consistency throughout the application. 
+
+Q2. 
