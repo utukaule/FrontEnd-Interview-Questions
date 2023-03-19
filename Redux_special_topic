@@ -1,7 +1,129 @@
+Note:   -> Redux is used coustom and external library for state managment.
+        -> Basically we create redux store and all states are there 
+           and when ever we want any data we can grab throw the store
 Q1. Why Redux?
     ->  When a JavaScript application grows big, it becomes difficult for the user to manage its state.
     ->  Redux solves this problem by managing applications state with a single global object called store.
     ->  Making testing very easy.
     ->  Consistency throughout the application. 
 
-Q2. 
+Q2. What is ACTION?
+    ->  It is intention to cause change (Koi bhi asi kriya jo application ki state ko badlegi)
+
+Q3. What is REDUCER?
+    ->  Reducer is function that determines changes to an application state. reture the new state and tell the store how to do.
+    ->  It uses the action it receives to determine this change.
+    ->  view(ui) --> Action --> Reducer --> store --> view(ui)
+Q4. What is prop driling?
+    ->  
+
+Q5. What is context API?
+    ->  
+
+
+
+
+Thapa technical video link:https://www.youtube.com/watch?v=1oU_YGhT7ck
+
+Q1. Why redux is used?
+    ->  Redux is used to state managment of application.
+    ->  It is used to manage and update application state using
+        events called 'actions'.
+
+Note:-  the data in react always flows from parent to child 
+        components which makes it unidirectional.
+
+Q2. Normally in react how to pass data? OR how data flows
+    in react?
+    ->  the data in react always flows from parent to child.
+        which  makes it unidirectional.
+
+NOTE:-  We can send data from parent to child but never from child to parent.
+    
+Q3. What is prop driling?
+    ->  To send data from component A to component D.
+    ->  react uses prop driling method.
+    ->  send data A to B then 
+                  B to C then
+                  C to D
+    ->  
+
+Q4. How redux solve the problem?
+    ->  Redux store the data in store know as redux store
+        and whenever any component requires the data they will directly go to the redux store and ask store for specific data.
+
+
+
+<!-- Redux main topics -->
+
+Q5. What is Action?
+    ->  Which means what todo
+    ->  eg.
+        ->  counter application
+            ->  in counter application there are two actions
+                ->  Increment
+                ->  Decrement
+    
+    ->  Action are plain js objects that have a type
+        "field".
+        Action only tells what to do, 
+        But they dont tell how to do.
+    ->  There will two actions for increment and decrement
+    ->  return{
+            type: "INCREMENT",  
+            payload: num
+        }
+    ->  return{
+            type:"DECREMENT",
+            payload: num
+        } 
+    ->  Action is created by "Action Creator"
+        ->  Action creator is pure function which
+            creates an action.
+    ->  It is reusable, portable and easy to test
+    ->  After this it goes to reducer.
+
+
+Q6. What is Reducer?
+    ->  Reducer containes state and action which tells that
+        how todo.
+    ->  Reducers are functions that take the "current
+        state" and an action as arguments, and return a "new state" as result.
+
+    ->  const initialState = 0;
+        const changeNumber = (state = initialState, action) => {
+            switch(action.type){
+                case "INCREMENT" : return state + action.payload;
+                case "DECREMENT" : return state - 1;
+                default : return state; 
+            }
+        }
+
+
+Q7. What is store or state?
+    ->  Object which holds the state of the application.
+    ->  Also have functions associated with store
+        ->  createStore()
+        ->  dispatch(action)
+    ->  The redux store brings all together the state, actions
+        and reducers that make up your app.
+    ->  Its imp to note that you will only have a single store
+        in a redux application.
+    ->  Every redux store has a single root reducer 
+        function.
+
+    ->  import {createStore} from 'redux';
+        const store = createStore(rootReducers);    
+
+
+<!-- REDUX PRINCIPLES -->
+
+    1.  Single source of truth
+        ->  The global state of your application is stored as
+            an object inside a single store.
+    2.  State is Read-only 
+        ->  The only way to change the state is to 
+            dispatch an action.
+    3.  Immutability, One-way data flow, 
+        Predictability of outcome
+    4.  Changes are made with pure reducer functions.        
