@@ -1,6 +1,7 @@
 Note:   -> Redux is used coustom and external library for state managment.
         -> Basically we create redux store and all states are there 
            and when ever we want any data we can grab throw the store
+
 Q1. Why Redux?
     ->  When a JavaScript application grows big, it becomes difficult for the user to manage its state.
     ->  Redux solves this problem by managing applications state with a single global object called store.
@@ -14,6 +15,7 @@ Q3. What is REDUCER?
     ->  Reducer is function that determines changes to an application state. reture the new state and tell the store how to do.
     ->  It uses the action it receives to determine this change.
     ->  view(ui) --> Action --> Reducer --> store --> view(ui)
+
 Q4. What is prop driling?
     ->  
 
@@ -64,8 +66,8 @@ Q5. What is Action?
                 ->  Increment
                 ->  Decrement
     
-    ->  Action are plain js objects that have a type
-        "field".
+    ->  Action are plain js objects that have a "type"
+        field.
         Action only tells what to do, 
         But they dont tell how to do.
     ->  There will two actions for increment and decrement
